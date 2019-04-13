@@ -1,0 +1,7 @@
+Our idea was to create a database that users can find contact information for their favorite music artists in 2017. 
+
+Extract: We retrieved a database from Kaggle.com that took the top tracks of 2017 (100 songs) from Spotify. The second datasource came from github. We found a dataset that took 10,000 MTV's top music artists and provided their Facebook, Twitter, and website URL. Both of our datasets are CSV files. 
+
+Transform: We used Python to clean, merge and transform our data. First, we took the Artist_socialmedia database and reduced to only the name, facebook, twitter, and website columns. We changed the "name" column to "artists" to match the Spotify database. On the Spotify database, we reduced to id, name, and artists. We changed the "id" column to "Spotify_id" to make it easy to read. We also dropped duplicate artists on the Spotify database. Finally, we merged the two dataframes so the artists facebook, twitter, and website information would link with the Spotify information
+
+Load: We used MongoDB to load our data. We chose this because we wanted to represent our data in a JSON format because it would make it easier and faster to integrate our data with certain types of applications with its dynamic schemas. 
